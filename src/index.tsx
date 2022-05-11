@@ -1,6 +1,14 @@
 import React from "react";
-import ReactDom from 'react-dom'
+import { createRoot } from 'react-dom/client'
 
+import TaggingCanvas from 'tagging-canvas'
 import s from './index.module.scss'
 
-ReactDom.render(<div className={s.qwe}>qwe</div>, document.getElementById('root'))
+const cvs = (document.getElementById('canvas') as HTMLCanvasElement);
+const root = createRoot((document.getElementById('root') as HTMLCanvasElement));
+
+const tc = new TaggingCanvas({node: cvs})
+
+console.log(tc)
+
+root.render(<div className={s.qwe}>qwe</div>)
