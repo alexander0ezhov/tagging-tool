@@ -2,7 +2,7 @@
   "name": "tagging-tool",
   "version": "0.0.1",
   "description": "a tagging tool for neural networks training",
-  "main": "index.ts",
+  "main": "index.tsx",
   "author": "alexander0ezhov",
   "license": "MIT",
   "scripts": {

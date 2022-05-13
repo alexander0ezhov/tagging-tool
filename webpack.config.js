@@ -9,13 +9,13 @@ module.exports = {
     filename: "[name].[chunkhash].js",
   },
   resolve: {
-    extensions: [".ts", ".js", "css"],
+    extensions: [".ts", ".tsx", ".js", ".jsx", "css"],
   },
   module: {
     rules: [
       {
         test: /\.(ts|tsx|js|jsx)$/,
-        use: ['ts-loader'],
+        use: ["ts-loader"],
         exclude: /node_modules/,
       },
       {
@@ -23,15 +23,15 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               modules: {
-                mode: 'local',
-                localIdentName: '[name]__[local]__[hash:base64:5]',
+                mode: "local",
+                localIdentName: "[name]__[local]__[hash:base64:5]",
               },
             },
           },
-          'sass-loader',
+          "sass-loader",
         ],
       },
       {
