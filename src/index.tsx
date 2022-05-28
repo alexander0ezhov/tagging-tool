@@ -1,10 +1,8 @@
 import React from "react";
-import ReactDom from 'react-dom'
+import { createRoot } from "react-dom/client";
 
-import s from './index.module.scss'
+import App from "./App";
 
-import TaggingCanvas from "tagging-canvas";
+const root = createRoot(document.getElementById("root") as HTMLCanvasElement);
 
-console.log(TaggingCanvas)
-
-ReactDom.render(<div className={s.qwe}>qwe</div>, document.getElementById('root'))
+root.render(<App />);
